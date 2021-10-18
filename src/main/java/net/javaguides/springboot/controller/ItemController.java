@@ -49,13 +49,14 @@ public class ItemController {
 	}
 	
 	// update item rest api
+	
 	@PutMapping("/items/{id}")
 	public ResponseEntity<Item> updateItem(@PathVariable Long id, @RequestBody Item itemDetails){
 		Item item = itemRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("Item not exist with id :" + id));
 		
-		item.setName(itemDetails.getName());
 		item.setType(itemDetails.getType());
+		item.setDescription(itemDetails.getDescription());
 		
 		Item updatedItem = itemRepository.save(item);
 		return ResponseEntity.ok(updatedItem);
