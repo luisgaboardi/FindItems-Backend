@@ -19,13 +19,17 @@ Um sistema de controle de items de um achados e perdidos, implementado em Typesc
 
 ### Criar banco de dados
 Abra o terminal e o cliente do MySQL como um usuário capaz de criar outros usuários, por exemplo o root.
+
 ```$ sudo mysql -u root -p```
 
 Crie uma nova base de dados:
+
 ```mysql> create database db_example;```
 
 Crie o usuário e o dê os privilégios desse banco:
+
 ```mysql> create user 'springuser'@'%' identified by 'ThePassword';```
+
 ```mysql> grant all on db_example.* to 'springuser'@'%';```
 
 ### Linkar o banco de dados criado com a aplicação:
