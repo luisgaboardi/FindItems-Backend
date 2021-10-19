@@ -33,7 +33,9 @@ Crie o usuário e o dê os privilégios desse banco:
 No arquivo **resources/application.properties**, substitua os valores de acordo com o nome que deu ao banco de dados e ao usuário:
 
 ```spring.datasource.url=jdbc:mysql://${MYSQL_HOST:localhost}:3306/db_example```
+
 ```spring.datasource.username=springuser```
+
 ```spring.datasource.password=ThePassword```
 
 ## Execução
